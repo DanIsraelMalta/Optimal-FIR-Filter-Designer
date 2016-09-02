@@ -1,0 +1,25 @@
+LAYOUT(OptimalFilterLayout, 692, 532)
+	ITEM(Label, dv___0, SetLabel(t_("Filter Order:")).SetFont(StdFontZ(12)).LeftPosZ(492, 64).TopPosZ(20, 20))
+	ITEM(Label, dv___1, SetLabel(t_("Sampling Frequency:")).SetFont(StdFontZ(12)).LeftPosZ(244, 104).TopPosZ(20, 20))
+	ITEM(Label, dv___2, SetLabel(t_("Filter:")).SetFont(StdFontZ(12)).LeftPosZ(8, 32).TopPosZ(44, 20))
+	ITEM(Label, dv___3, SetLabel(t_("Cut Off Frequency:")).SetFont(StdFontZ(12)).LeftPosZ(8, 96).TopPosZ(20, 20))
+	ITEM(EditDouble, cutoffFrequencyEdit, Max(1000000).Min(0.000001).SetFont(StdFontZ(12)).LeftPosZ(108, 64).TopPosZ(20, 20))
+	ITEM(DropList, cutoffFrequencyType, LeftPosZ(176, 64).TopPosZ(20, 20))
+	ITEM(EditDouble, samplingFrequencyEdit, Max(1000000).Min(0.000001).SetFont(StdFontZ(12)).LeftPosZ(352, 64).TopPosZ(20, 20))
+	ITEM(DropList, samplingFrequencyType, LeftPosZ(420, 64).TopPosZ(20, 20))
+	ITEM(SliderCtrl, filterOrderSpiner, LeftPosZ(560, 80).TopPosZ(20, 20))
+	ITEM(LabelBox, dv___9, SetLabel(t_("Filter Parameters")).LeftPosZ(4, 684).TopPosZ(0, 72))
+	ITEM(Button, calculateBtn, SetLabel(t_("Calculate Filter")).SetFont(StdFontZ(14)).Tip(t_("calculate filter coefficents")).LeftPosZ(4, 92).TopPosZ(76, 20))
+	ITEM(Button, aboutBtn, SetLabel(t_("About")).SetFont(StdFontZ(14)).LeftPosZ(648, 40).TopPosZ(76, 20))
+	ITEM(EditString, filterOut, SetFont(StdFontZ(12)).SetEditable(false).LeftPosZ(44, 640).TopPosZ(44, 20))
+	ITEM(EditInt, filterOrderEdit, SetFont(StdFontZ(12)).SetEditable(false).LeftPosZ(644, 40).TopPosZ(20, 20))
+	ITEM(ScatterCtrl, scatterPoleZero, SetAxisWidth(12).SetTitleFont(SansSerifZ(14).Bold()).SetPlotAreaLeftMargin(50).SetPlotAreaRightMargin(10).SetPlotAreaTopMargin(5).SetPlotAreaColor(Color(229, 229, 229)).SetLabelX(t_("Real")).SetLabelY(t_("Imaginary")).SetColor(Color(229, 229, 229)).ShowLegend(false).SetLegendAnchor(4).LeftPosZ(348, 340).TopPosZ(100, 212))
+	ITEM(ScatterCtrl, scatterStepImpulse, SetAxisWidth(12).SetTitleFont(SansSerifZ(14).Bold()).SetPlotAreaLeftMargin(50).SetPlotAreaRightMargin(10).SetPlotAreaTopMargin(5).SetPlotAreaColor(Color(229, 229, 229)).SetLabelX(t_("Time [cyc]")).SetLabelY(t_("Step Response")).SetColor(Color(229, 229, 229)).ShowLegend(false).SetLegendAnchor(4).LeftPosZ(4, 340).TopPosZ(100, 212))
+	ITEM(ScatterCtrl, scatterFrequency, SetAxisWidth(12).SetTitleFont(SansSerifZ(14).Bold()).SetPlotAreaLeftMargin(50).SetPlotAreaRightMargin(60).SetPlotAreaTopMargin(5).SetPlotAreaColor(Color(229, 229, 229)).SetLabelX(t_("Frequency [Hz]")).SetLabelY(t_("Magnitude [db]")).SetLabelY2(t_("Phase [deg]")).SetColor(Color(229, 229, 229)).SetLegendAnchor(2).SetLegendRowSpacing(2).SetLegendFillColor(Color(229, 229, 229)).LeftPosZ(4, 684).TopPosZ(316, 212))
+END_LAYOUT
+
+LAYOUT(AboutDialogLayout, 444, 224)
+	ITEM(Button, ok, SetLabel(t_("OK")).HCenterPosZ(72, 4).BottomPosZ(8, 24))
+	ITEM(StaticText, dv___1, SetText(t_("OptimalFilter (0.1) \n\nGiven cutoff frequency (bandwidth; 3db frequency), sampling frequency and filter order,\nOptimalFilter will return an all-pole, near-linear phase low pass filter with optimized\nmagnitude response in the passband region.\n\nremarks:\n- since the filter is \"near linear\" in phase, it should be forward/backward filtered\n  on implementation if non linear phase shift is not acceptable.\n- left click with the mouse on the graphic output to open a label displaying \n  point information.\n\nQuestions? Suggestions? --> malta.dan@gmail.com")).SetFont(StdFontZ(12)).HSizePosZ(4, 4).VSizePosZ(8, 40))
+END_LAYOUT
+
