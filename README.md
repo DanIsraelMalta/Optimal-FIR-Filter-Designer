@@ -1,7 +1,7 @@
 # optimal filter design
 
 This project is a part of my private assement of two frameworks:
-* the Ultimate++ c++ framework, assesed as a rapid GUI prototyper.
+* the Ultimate++ (c++) framework, assesed as a rapid GUI prototyper.
 * Eigen linear algebra framework, assesed as a Matlab replacement.
  
 Anyway, given cutoff frequency (bandwidth; 3db frequency), sampling frequency and filter order,
