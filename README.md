@@ -10,11 +10,4 @@ OptimalFilter will return an all-pole, near-linear phase low pass filter with op
 magnitude response in the passband region.
 
 
-remarks:
-* since the filter is "near linear" in phase, it should be forward/backward filtered
- on implementation if non linear phase shift is not acceptable.
-* left click with the mouse on the graphic output to open a label displaying 
- point information.
-
-screenshot:
 ![Alt text](https://cloud.githubusercontent.com/assets/5231886/18216478/979c9f50-715f-11e6-85af-e4b2593f448a.png)
